@@ -1,0 +1,2 @@
+mkdir /my/own/datadir
+docker run -d --name redmine -p 3000:3000 -v /my/own/datadir:/usr/src/redmine/files --link mysql:mysql redmine

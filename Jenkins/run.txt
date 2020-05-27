@@ -1,0 +1,1 @@
+docker run -d -p 8080:8080 -v /var/lib/jenkins-data:/var/jenkins_home -u root jenkins

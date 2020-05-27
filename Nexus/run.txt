@@ -1,0 +1,8 @@
+# nexus 데이터를 기록할 디렉토리를 생성, nexus 컨테이너에서 접근할 수 있도록 권한 부여
+$ mkdir /var/lib/nexus-data && sudo chown -R 200 /var/lib/nexus-data
+
+# 생성한 데이터 디렉토리를 nexus 의 work directory 로 설정하여 컨테이너 구동
+$ sudo docker run -d -p 8081:8081 --name nexus -v /var/lib/nexus-data:/sonatype-work sonatype/nexus
+
+Default 계정은 admin / admin123 이며, 보안을 위해 비밀번호를 변경해 두는 것이 좋다.
+

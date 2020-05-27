@@ -1,0 +1,4 @@
+# use a persitent volume
+mkdir /var/lib/scm-data
+chown 1000:1000 /var/lib/scm-data
+docker run -d -name scmmgr -v /var/lib/scm-data:/var/lib/scm -p 8080:8080 sdorra/scm-manager:1.60

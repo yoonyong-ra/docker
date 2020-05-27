@@ -1,0 +1,2 @@
+mkdir /my/own/datadir
+docker run --name some-mariadb -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mariadb:tag
